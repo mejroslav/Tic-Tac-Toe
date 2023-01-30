@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .board {
@@ -93,7 +93,7 @@ so
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
-  content: '';
+  content: "";
   position: absolute;
   width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
@@ -113,7 +113,7 @@ so
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::before,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 50%;
 }
@@ -134,74 +134,76 @@ so
 /* Intro message */
 
 .intro-message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    background-color: rgba(0, 0, 0, 0.9);
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 3.4rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3.4rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-message button {
-    padding: 0.25em 0.5em;
-    margin: 0.25em 0.5em;
+  padding: 0.25em 0.5em;
+  margin: 0.25em 0.5em;
 
-    font-size: 3rem;
-    background-color: rgba(255, 255, 255, 0.80);
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
+  font-size: 3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .intro-message button:hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.80);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-out;
 }
 
 /* Winning message */
 
 .winning-message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    background-color: rgba(0, 0, 0, 0.9);
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 5rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .winning-message button {
-    padding: 0.25em 0.5em;
-    margin: 0.25em 0.5em;
+  padding: 0.25em 0.5em;
+  margin: 0.25em 0.5em;
 
-    font-size: 3rem;
-    
-    background-color: rgba(255, 255, 255, 0.80);
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
+  font-size: 3rem;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .winning-message button:hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.80);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-out;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
