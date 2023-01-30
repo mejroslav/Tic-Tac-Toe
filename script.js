@@ -4,6 +4,10 @@ let circleTurn;
 
 const cellElements = document.querySelectorAll("[data-cell]");
 const board = document.getElementById("board");
+
+const introMessageScreen = document.querySelector("#introMessage");
+const startButton = document.getElementById("start-btn");
+
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
@@ -27,7 +31,10 @@ const WINNING_COMBINATIONS = [
 main();
 
 function main() {
-  startGame();
+  startButton.addEventListener("click", (e) => {
+    introMessageScreen.classList.add("hide");
+    startGame();
+  });
 }
 
 function startGame() {
@@ -49,10 +56,10 @@ function handleClick(e) {
   // placeMark
   placeMark(cell, currentClass);
   if (checkWin(currentClass)) {
-    console.log(`${currentClass} wins!`);
+    console.log(`${currentClass} vyhrává!`);
     endGame({ draw: false });
   } else if (isDraw()) {
-    console.log("It's a draw!");
+    console.log("Remíza!");
     endGame({ draw: true });
   }
   // switch turns
