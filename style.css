@@ -9,6 +9,9 @@
 :root {
   --cell-size: 160px;
   --mark-size: calc(var(--cell-size) * 0.9);
+
+  --circle-color: orange;
+  --x-color: green;
 }
 
 body {
@@ -84,9 +87,11 @@ so
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+  background-color: var(--x-color);
+}
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  background-color: orange;
+  background-color: var(--circle-color);
 }
 
 .cell.x::before,
@@ -97,6 +102,7 @@ so
   position: absolute;
   width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
+  transition: all 0.5s ease-in;
 }
 
 .cell.x::before,
@@ -116,6 +122,7 @@ so
   content: "";
   position: absolute;
   border-radius: 50%;
+  transition: all 0.5s ease-in;
 }
 
 .cell.circle::before,
@@ -129,6 +136,7 @@ so
   width: calc(var(--mark-size) * 0.7);
   height: calc(var(--mark-size) * 0.7);
   background-color: lightgrey;
+  transition: all 0.5s ease-in;
 }
 
 /* Intro message */
@@ -150,21 +158,21 @@ so
   align-items: center;
 }
 
-.intro-message button {
+button {
   padding: 0.25em 0.5em;
-  margin: 0.25em 0.5em;
+  margin: 0.3em 0.5em;
 
-  font-size: 3rem;
+  font-size: 2.8rem;
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
 .intro-message button:hover {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.8);
-  transition: all 0.5s ease-out;
 }
 
 /* Winning message */
@@ -186,22 +194,9 @@ so
   align-items: center;
 }
 
-.winning-message button {
-  padding: 0.25em 0.5em;
-  margin: 0.25em 0.5em;
-
-  font-size: 3rem;
-
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
 .winning-message button:hover {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.8);
-  transition: all 0.5s ease-out;
 }
 
 .hide {

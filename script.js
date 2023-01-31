@@ -104,9 +104,9 @@ function isDraw() {
 
 function endGame({ draw }) {
   if (draw) {
-    winningMessageTextElement.innerText = "It's a draw!";
+    winningMessageTextElement.innerText = "Remíza!";
   } else {
-    winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} wins!`;
+    winningMessageTextElement.innerText = `${circleTurn ? "Vyhrávají kolečka!" : "Vyhrávají křížky!"}`;
   }
   winningMessageScreen.classList.remove("hide");
 }
